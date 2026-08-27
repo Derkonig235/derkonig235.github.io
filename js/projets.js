@@ -1,0 +1,1 @@
+document.querySelectorAll('.shot').forEach(s=>s.addEventListener('click',()=>s.classList.toggle('active')));

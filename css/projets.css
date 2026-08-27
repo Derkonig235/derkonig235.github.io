@@ -1,0 +1,290 @@
+*{
+    box-sizing:border-box
+}
+
+body{
+    font-family:Inter,system-ui,sans-serif;
+    background:#f7f8fb;
+    color:#111827;
+    margin:0;
+    line-height:1.65
+}
+
+a{
+    text-decoration:none;
+    color:inherit
+}
+
+.container{
+    width:min(1120px,calc(100% - 40px));
+    margin:auto
+}
+
+.header{
+    border-bottom:1px solid #e4e6ec;
+    background:#f7f8fbe8;
+    position:sticky;
+    top:0;z-index:10
+}
+
+.nav{
+    height:72px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between
+}
+
+.back{
+    font-size:.78rem;
+    font-weight:800;
+    color:#667085
+}
+
+.brand{
+    font:700 1.4rem 'Space Grotesk';
+    letter-spacing:-.08em
+}
+
+.brand span,.label,h1 span{
+    color:#7667ff
+}
+
+.hero{
+    padding:95px 0 65px
+}
+
+.label{
+    font-size:.7rem;
+    letter-spacing:.13em;
+    font-weight:800
+}
+
+.hero h1{
+    font:700 clamp(3rem,7vw,6rem)/.95 'Space Grotesk';
+    letter-spacing:-.065em;
+    margin:12px 0
+}
+
+.subtitle{
+    font-weight:700
+}
+
+.lead,.text{
+    max-width:700px;
+    color:#667085
+}
+
+.placeholder{
+    width:210px;
+    height:360px;
+    border:8px solid #111827;
+    border-radius:28px;
+    background:white;
+    display:grid;
+    place-items:center;
+    text-align:center;
+    color:#7667ff;
+    font:700 1.3rem 'Space Grotesk';
+    box-shadow:0 25px 50px #1118272e
+}
+
+.placeholder small{
+    display:block;
+    color:#7a8391;
+    font:500 .6rem Inter;
+    margin-top:12px
+}
+
+.section{
+    padding:80px 0;
+    background:white
+}
+
+.section:nth-child(odd){
+    background:#f7f8fb
+}
+
+.two{
+    display:grid;
+    grid-template-columns:.7fr 1.3fr;
+    gap:80px
+}
+
+.title{
+    font:700 2.4rem/1.05 'Space Grotesk';
+    letter-spacing:-.05em
+}
+
+.features,.gallery{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px
+}
+
+.feature{
+    padding:20px;
+    border:1px solid #e4e6ec;
+    border-radius:12px
+}
+
+.feature strong{
+    display:block;
+    font:600 1rem 'Space Grotesk'
+}
+
+.feature span{
+    font-size:.75rem;
+    color:#727c8b
+}
+
+.shot{
+    aspect-ratio:9/16;
+    border-radius:14px;
+    background:linear-gradient(145deg,#e7e5ff,#f3f4ff);
+    border:1px dashed #aaa4ed;
+    display:grid;
+    place-items:center;
+    text-align:center;
+    color:#7667ff;
+    font-weight:800;
+    font-size:.72rem;
+    padding:20px
+}
+
+.shot small{
+    display:block;
+    color:#7a8391;
+    font-weight:500;
+    margin-top:7px
+}
+
+.tech{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px
+}
+
+.tech span{
+    padding:7px 10px;
+    border-radius:6px;
+    background:#eef0f5;
+    font-size:.7rem;
+    font-weight:700;
+    color:#5d6676
+}
+
+.dark{
+    background:#0b101b!important;
+    color:#f5f7fb
+}
+
+.dark .text{
+    color:#a1aaba
+}
+
+.role-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;margin-top:30px
+}
+
+.role-card{
+    border:1px solid #ffffff1a;
+    padding:25px;
+    border-radius:14px
+}
+
+.role-card h3{
+    font:600 1.1rem 'Space Grotesk'
+}
+
+.role-card p{
+    font-size:.76rem;
+    color:#a1aaba
+}
+
+.footer{
+    padding:30px 0;
+    background:#070b13;
+    color:#a0a8b6
+}
+
+.footer-inner{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    font-size:.7rem
+}
+
+@media(max-width:800px){
+    .two{
+        grid-template-columns:1fr;
+        gap:35px
+    }
+    
+    .features,.gallery,.role-grid
+    {
+        grid-template-columns:1fr 1fr
+    }
+}
+
+@media(max-width:520px){
+    .container{
+        width:calc(100% - 28px)
+    }
+    
+    .gallery,.features,.role-grid{
+        grid-template-columns:1fr
+    }
+
+    .hero{
+        padding:70px 0 45px
+    }
+    
+    .hero h1{
+        font-size:3.1rem
+    }
+
+    .media{
+        height:280px
+    }
+    
+    .footer-inner{
+        flex-direction:column
+    }
+} 
+
+.media{
+    margin:30px auto 0;
+    width:100%;
+    max-width:850px;
+    height:390px;
+    border-radius:20px;
+    background:linear-gradient(145deg,#e0ddff,#f2f3ff);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+}
+
+.media img{
+    max-width:100%;
+    max-height:100%;
+    border-radius:20px;
+    width:auto;
+    height:auto;
+    object-fit:contain;
+    display:block;
+}
+
+.shot{
+    overflow:hidden;
+}
+
+.shot img{
+    width:100%;
+    height:100%;
+    border-radius:14px;
+    object-fit:contain;
+    display:block;
+}
